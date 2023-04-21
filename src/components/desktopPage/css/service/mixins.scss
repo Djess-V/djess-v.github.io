@@ -1,0 +1,27 @@
+@mixin btnStdBg-cBrd {
+  background-color: $colorGrey;
+  border: $bordStd;
+  cursor: pointer;
+}
+
+@mixin btnStnBrd-rad {
+  border-radius: 3px;
+}
+
+@mixin btnActive {
+  &:hover {
+    background-color: $colorGreen;
+    border-color: $colorGreen;
+  }
+}
+
+@mixin btnStd {
+  display: flex;
+  flex-direction: row;
+  @include btnStdBg-cBrd;
+  @include btnStnBrd-rad;
+  @include btnActive;
+  width: 33.5px;
+  height: 33px;
+  margin-right: 2px;
+}

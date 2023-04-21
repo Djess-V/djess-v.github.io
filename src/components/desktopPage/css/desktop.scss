@@ -1,0 +1,35 @@
+@import "./service/variable.scss";
+@import "./service/mixins.scss";
+
+#error-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  opacity: 0;
+}
+
+.wrapper {
+  background-image: url(../assets/img/other/picture.jpg);
+  background-size: 100% auto;
+  display: grid;
+  grid-template-columns: 1120px 800px;
+  grid-template-rows: 300px 300px 480px;
+  width: 1920px;
+  height: 1080px;
+}
+
+.wrapper * {
+  color: $colorWhite;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 9pt;
+}
+
+@import "./parts/display.scss";
+@import "./parts/keyboard.scss";
+@import "./parts/menu.scss";
+@import "./parts/papers.scss";
+@import "./parts/field.scss";
+@import "./parts/startModalWindow.scss";
+@import "./parts/form.scss";

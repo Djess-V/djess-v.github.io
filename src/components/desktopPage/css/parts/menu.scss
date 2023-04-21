@@ -1,0 +1,74 @@
+.wrapper_menu {
+  grid-column: 1;
+  grid-row: 2;
+  position: relative;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px 3px black;
+  top: 380px;
+  left: 50px;
+  width: 310px;
+  height: 280px;
+  background-color: rgb(189, 103, 117);
+
+  & > p {
+    margin: 10px 120px;
+    font-size: 20pt;
+    color: black;
+  }
+
+  & > ul {
+    margin: 25px 10px 0px 25px;
+    & > li {
+      color: black;
+      font-size: 14pt;
+      text-align: justify;
+      padding: 5px;
+      list-style-type: square;
+      cursor: pointer;
+
+      &:hover {
+        box-shadow: 0 0 10px 3px black;
+        background-color: lightpink;
+      }
+    }
+    & > li a {
+      color: inherit;
+      font-size: inherit;
+    }
+  }
+}
+
+.menu_modalDisplayBg {
+  position: absolute;
+  top: 100px;
+  left: 270px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid $colorGrey2;
+  box-shadow: 0 0 10px 3px black;
+  border-radius: 7px;
+  width: 500px;
+  height: 100px;
+  background-color: rgb(93, 182, 130);
+  z-index: 5;
+
+  & > span {
+    position: absolute;
+    top: -3px;
+    right: 5px;
+    color: black;
+    font-size: 14pt;
+    cursor: pointer;
+  }
+}
+
+.miniImage {
+  width: 104px;
+  height: 78px;
+  margin: 7px;
+  border: 2px solid $colorGrey2;
+  border-radius: 7px;
+  background-size: auto 78px;
+  cursor: pointer;
+}

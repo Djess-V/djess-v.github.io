@@ -1,0 +1,676 @@
+.computer__keyboard {
+  display: flex;
+  flex-direction: column;
+  background-color: $colorBlack;
+  color: $colorWhite;
+  border: 2px solid $colorGreen;
+  box-shadow: $boxShadow;
+  border-radius: $bordRad;
+  margin-top: 0px;
+  width: 700px;
+  height: 300px;
+  cursor: pointer;
+
+  button:not([class~="onComputer"]):hover {
+    background-color: $colorGrey;
+    border-color: $colorGrey2;
+  }
+
+  button[class~="onComputer"]:hover {
+    background-color: $colorGreen;
+    border-color: $colorGreen;
+  }
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.keyboard__upPanel {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 660px;
+  height: 20px;
+  margin: 15px auto;
+}
+
+.keyboard__upPanel__leftPanel {
+  display: flex;
+
+  .mouseBtn {
+    @include btnStdBg-cBrd;
+    border-radius: $bordRad;
+    width: 26px;
+    height: 24px;
+    margin-top: -3px;
+    padding-top: 2px;
+    cursor: pointer;
+  }
+
+  .soundBtn {
+    @include btnStdBg-cBrd;
+    margin-left: 25px;
+    border-radius: $bordRad 0px 0px $bordRad;
+    width: 50px;
+    cursor: pointer;
+  }
+
+  .homeBtn {
+    @include btnStdBg-cBrd;
+    margin-left: 2px;
+    width: 50px;
+    cursor: pointer;
+  }
+
+  .blockBtn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include btnStdBg-cBrd;
+    margin-left: 2px;
+    border-radius: 0px $bordRad $bordRad 0px;
+    width: 50px;
+    cursor: pointer;
+
+    & > p {
+      font-size: 5.5pt;
+    }
+  }
+
+  #onLock {
+    background-color: $colorGreen;
+  }
+
+  .offBtn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include btnStdBg-cBrd;
+    margin-left: 25px;
+    border-radius: $bordRad;
+    width: 50px;
+    cursor: pointer;
+
+    & > p {
+      font-size: 5.5pt;
+    }
+  }
+}
+
+#onComputer,
+#onLock,
+#onMusic,
+#onMouse {
+  background-color: $colorGreen;
+}
+
+.keyboard__upPanel__rightPanel {
+  display: flex;
+  margin-right: 24px;
+  margin-top: 37px;
+
+  .emblem {
+    display: flex;
+    align-self: flex-end;
+    @include btnStnBrd-rad;
+
+    & > p {
+      margin-left: 5px;
+      font-size: 18pt;
+    }
+  }
+}
+
+.upPanel_message {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  text-align: center;
+  left: 288px;
+  width: 250px;
+  height: 33px;
+}
+
+.upPanel_message_layout {
+  background-color: $colorGreen;
+  border: 1px solid $colorGrey2;
+  border-radius: 5px;
+  color: black;
+  text-align: center;
+  width: 30px;
+}
+
+.upPanel_message_message {
+  background-color: $colorGreen;
+  border: 1px solid $colorGrey2;
+  border-radius: 5px;
+  color: black;
+  text-align: center;
+  margin-left: 10px;
+  width: 145px;
+}
+
+.keyboard__downContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 660px;
+  height: 210px;
+  margin: 15px auto;
+}
+
+.keyboard__downContainer__centralPanel {
+  display: flex;
+  flex-direction: column;
+  width: 516px;
+  height: 210px;
+  margin-left: -8px;
+}
+
+.centralPanel__blockEsc {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 516px;
+  height: 25px;
+
+  & > button[class~="buttonPressed"] {
+    background-color: $colorGreen;
+    border-color: $colorGreen;
+  }
+}
+
+.blockEsc__btnClassF {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: space-around;
+  @include btnStdBg-cBrd;
+  @include btnStnBrd-rad;
+  @include btnActive;
+  padding-left: 6px;
+  width: 32px;
+  height: 23px;
+  margin-right: 2px;
+
+  & > p {
+    font-size: 5.5pt;
+    color: $colorBlue;
+  }
+
+  &:first-child {
+    padding-left: 5px;
+    padding-top: 2px;
+  }
+
+  &:nth-child(14),
+  &:nth-child(15) {
+    padding: 1px;
+    padding-left: 3px;
+
+    p {
+      font-size: 6.5px;
+    }
+  }
+
+  &:nth-child(14) {
+    font-size: 7.5pt;
+  }
+
+  &:nth-child(15) {
+    font-size: 7pt;
+  }
+
+  .btn1F_F8 {
+    display: flex;
+  }
+}
+
+.buttonOn {
+  background-color: $colorGreen;
+  border: 2px inset;
+}
+
+.centralPanel__blockNumbers {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 2px;
+  width: 516px;
+  height: 35px;
+
+  & > button[class~="buttonPressed"] {
+    background-color: $colorGreen;
+    border-color: $colorGreen;
+  }
+}
+
+.blockNumbers__btnClassStd {
+  @include btnStd;
+  justify-content: space-around;
+
+  &:first-child {
+    width: 24px;
+
+    .column2 {
+      align-self: end;
+    }
+  }
+
+  &:last-child {
+    width: 43px;
+    font-size: 8px;
+    padding: 9px 0px 0px 2px;
+
+    p {
+      font-size: 6pt;
+    }
+  }
+}
+
+.centralPanel__containerEnter {
+  display: grid;
+  grid-template-columns: 1fr 33.5px;
+  grid-template-rows: 1fr 1fr;
+  gap: 2px;
+  margin-top: 2px;
+  width: 514px;
+  height: 72px;
+}
+
+#activeBtnEnter {
+  background-color: $colorGreen;
+  border-color: $colorGreen;
+}
+
+.btnEnter {
+  display: grid;
+  grid-template-columns: 9.5px 24px;
+  grid-template-rows: 33px 1fr;
+  grid-column: 2;
+  grid-row: 1/3;
+
+  .btnEnter__LU {
+    background-color: $colorGrey;
+    border-color: grey;
+    border-width: 1px;
+    border-style: solid none solid solid;
+    border-radius: 3px 0 0 3px;
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  div[class~="buttonPressed"] {
+    background-color: $colorGreen;
+    border-color: $colorGreen;
+  }
+
+  .btnEnter__LD {
+    grid-column: 1;
+    grid-row: 2;
+    z-index: -5;
+  }
+
+  .btnEnter__RU {
+    background-color: $colorGrey;
+    border-color: grey;
+    border-width: 1px;
+    border-style: solid solid none none;
+    border-radius: 0 3px 0 0;
+    padding-top: 7px;
+    grid-column: 2;
+    grid-row: 1;
+
+    & > p {
+      font-size: 8pt;
+      margin-left: -5px;
+      margin-top: 3px;
+    }
+  }
+
+  .btnEnter__RD {
+    background-color: $colorGrey;
+    border-color: grey;
+    border-width: 1px;
+    border-style: none solid solid solid;
+    border-radius: 0 0 3px 3px;
+    grid-column: 2;
+    grid-row: 2;
+  }
+}
+
+.centralPanel__blockTab {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  grid-column: 1;
+  grid-row: 1;
+
+  & > button[class~="buttonPressed"] {
+    background-color: $colorGreen;
+    border-color: $colorGreen;
+  }
+}
+
+.blockTab__btnClassStd {
+  @include btnStd;
+  justify-content: center;
+  align-items: center;
+
+  &:nth-child(1) {
+    width: 43px;
+    padding-right: 10px;
+  }
+
+  &:nth-child(n + 2):nth-child(-n + 11) {
+    flex-direction: column;
+
+    .column1 {
+      margin-right: 15px;
+    }
+
+    .column2 {
+      margin-left: 15px;
+    }
+  }
+
+  &:nth-child(12),
+  &:nth-child(13) {
+    justify-content: space-evenly;
+
+    .column1 {
+      margin-bottom: 3px;
+    }
+
+    .column2 {
+      margin-top: 12px;
+    }
+  }
+
+  &:nth-child(13) {
+    width: 24px;
+  }
+}
+
+.centralPanel__blockCapsLock {
+  display: grid;
+  grid-template-columns: 62px repeat(11, 33.5px) 24px;
+  gap: 2px;
+  grid-column: 1;
+  grid-row: 2;
+
+  & > button[class~="buttonPressed"] {
+    background-color: $colorGreen;
+    border-color: $colorGreen;
+  }
+
+  .buttonOn {
+    background-color: $colorGreen;
+    border: 2px inset;
+  }
+}
+
+.blockCapsLock__btnClassStd {
+  @include btnStd;
+  justify-content: center;
+  align-items: center;
+
+  &:nth-child(1) {
+    display: flex;
+    justify-content: space-around;
+    padding: 0px 6px;
+    width: 62px;
+
+    .column1 {
+      font-size: 9pt;
+    }
+
+    .column2 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid white;
+      width: 14px;
+      height: 14px;
+    }
+  }
+
+  &:nth-child(n + 2):nth-child(-n + 10) {
+    flex-direction: column;
+
+    .column1 {
+      margin-right: 13px;
+    }
+
+    .column2 {
+      margin-left: 13px;
+    }
+  }
+
+  &:nth-child(11),
+  &:nth-child(12),
+  &:nth-child(13) {
+    justify-content: space-evenly;
+
+    .column1 {
+      margin-bottom: 3px;
+    }
+
+    .column2 {
+      margin-top: 12px;
+    }
+  }
+
+  &:nth-child(13) {
+    width: 32.5px;
+    z-index: 1;
+  }
+}
+
+.centralPanel__blockShift {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 2px;
+  width: 516px;
+  height: 35px;
+
+  & > button[class~="buttonPressed"] {
+    background-color: $colorGreen;
+    border-color: $colorGreen;
+  }
+
+  .buttonOn {
+    background-color: $colorGreen;
+    border: 2px inset;
+  }
+}
+
+.blockShift__btnClassStd {
+  @include btnStd;
+  justify-content: center;
+  align-items: center;
+
+  &:nth-child(n + 3):nth-child(-n + 9) {
+    flex-direction: column;
+
+    .column1 {
+      margin-right: 15px;
+    }
+
+    .column2 {
+      margin-left: 15px;
+    }
+  }
+
+  &:nth-child(2),
+  &:nth-child(10),
+  &:nth-child(11) {
+    justify-content: space-evenly;
+
+    .column2 {
+      margin-top: 14px;
+    }
+  }
+
+  &:nth-child(12) {
+    justify-content: space-evenly;
+  }
+
+  &:nth-child(13) {
+    flex-direction: column;
+
+    .column1 {
+      margin-bottom: 2px;
+
+      p {
+        padding-right: 1px;
+        font-size: 9px;
+        display: inline;
+      }
+    }
+  }
+}
+
+.centralPanel__blockSpace {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 2px;
+  width: 516px;
+  height: 35px;
+
+  & > button[class~="buttonPressed"] {
+    background-color: $colorGreen;
+    border-color: $colorGreen;
+  }
+
+  .buttonOn {
+    background-color: $colorGreen;
+    border: 2px inset;
+  }
+}
+
+.blockSpace__btnClassStd {
+  @include btnStd;
+  justify-content: center;
+  align-items: center;
+
+  &:first-child {
+    border-radius: 3px 3px 3px 15px;
+  }
+
+  &:last-child {
+    border-radius: 3px 3px 15px 3px;
+  }
+
+  &:nth-child(2) .column1 {
+    background-color: $colorBlue;
+    padding: 2px;
+    @include btnStnBrd-rad;
+
+    p {
+      font-size: 7pt;
+      color: $colorBlack;
+    }
+  }
+
+  &:nth-child(5) {
+    width: 182px;
+  }
+
+  &:nth-child(7) .column1 {
+    margin-bottom: 2px;
+
+    p {
+      padding: 1px;
+      display: inline-block;
+      padding-right: 1px;
+      font-size: 12px;
+    }
+  }
+
+  &:nth-child(7) .column2 {
+    margin-top: -10px;
+  }
+
+  &:nth-child(8) .column1 p,
+  &:nth-child(10) .column1 p {
+    font-size: 7.5pt;
+    margin-top: 2px;
+  }
+
+  &:nth-child(9) {
+    flex-direction: column;
+
+    .column1 {
+      margin-bottom: 2px;
+
+      p {
+        padding-right: 1px;
+        font-size: 9px;
+        display: inline;
+      }
+    }
+  }
+}
+
+.keyboard__downContainer__mousePanel {
+  margin-right: -8px;
+  display: flex;
+  flex-direction: column;
+  width: 150px;
+  height: 220px;
+}
+
+.downContainer__mousePanel__board {
+  position: relative;
+  background-image: url(../assets/img/other/abstract.jpg);
+  background-size: 100%;
+  border: 2px grey;
+  border-style: solid solid none solid;
+  border-radius: $bordRad $bordRad 0px 0px;
+  height: 130px;
+}
+
+.downContainer__mousePanel__buttons {
+  display: flex;
+  flex-direction: row;
+  height: 40px;
+}
+
+.mousePanel__buttons__left {
+  width: 74px;
+  background-color: $colorGrey;
+  border: 2px $colorGrey2;
+  border-style: solid solid inset solid;
+  border-radius: 0px 0px 0px $bordRad;
+}
+
+.mousePanel__buttons__right {
+  background-color: $colorGrey;
+  border: 2px $colorGrey2;
+  border-style: solid inset inset solid;
+  border-radius: 0px 0px $bordRad 0px;
+  margin-left: 2px;
+  width: 74px;
+}
+
+.mousePanel__buttons__left,
+.mousePanel__buttons__right {
+  @include btnActive;
+}
+
+.downContainer__mousePanel__message {
+  background-color: rgb(93, 182, 130);
+  border: 1px solid $colorGrey2;
+  border-radius: 5px;
+  color: black;
+  text-align: center;
+  margin-top: 20px;
+  width: 145px;
+}

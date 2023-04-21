@@ -1,0 +1,62 @@
+.wrapper__field {
+  grid-column: 1;
+  grid-row: 2;
+  position: relative;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px 3px black;
+  top: 380px;
+  left: 450px;
+  width: 640px;
+  height: 350px;
+  background-color: rgb(161, 205, 103);
+  overflow-y: scroll;
+
+  & * {
+    font-family: Montserrat, sans-serif;
+    color: $colorBlack;
+    line-height: 110%;
+    font-weight: 600;
+  }
+
+  & > h2 {
+    text-align: center;
+    font-size: 20pt;
+    padding: 10px 0px;
+  }
+
+  & > p {
+    padding-left: 10px;
+    font-size: 14pt;
+  }
+
+  & > ul {
+    list-style: none;
+    padding: 20px 15px 5px 20px;
+
+    & > li {
+      font-family: inherit;
+      color: inherit;
+      line-height: 150%;
+      padding-bottom: 20px;
+      font-weight: 600;
+    }
+  }
+
+  & > ul li::before {
+    color: $colorBlack;
+    padding: 5px;
+    font-size: 12pt;
+    content: "- ";
+  }
+}
+.field__ul-2Level {
+  color: inherit;
+  padding-left: 30px;
+  line-height: 150%;
+  & > li {
+    font-family: Montserrat, sans-serif;
+    font-weight: 500;
+    color: inherit;
+    line-height: inherit;
+  }
+}

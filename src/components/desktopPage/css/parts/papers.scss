@@ -1,0 +1,79 @@
+.papers {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 800px;
+  height: 330px;
+  grid-column: 2;
+  grid-row: 2;
+}
+
+div[class^="note"] {
+  position: relative;
+  margin: 5px;
+  border-radius: 3px;
+  width: 170px;
+  height: 220px;
+  padding: 10px 10px;
+
+  & > p {
+    color: $colorGrey;
+  }
+
+  &[class$="1"] {
+    top: 20px;
+    left: 50px;
+    transform: rotate(15deg);
+    background-color: rgb(241, 241, 117);
+  }
+
+  &[class$="2"] {
+    top: 120px;
+    background-color: rgb(14, 232, 248);
+  }
+
+  &[class$="3"] {
+    left: -30px;
+    transform: rotate(-25deg);
+    background-color: rgb(233, 137, 12);
+  }
+
+  &[class$="4"] {
+    top: 120px;
+    left: -80px;
+    transform: rotate(35deg);
+    background-color: rgb(55, 231, 39);
+  }
+
+  .image_1 {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    top: 140px;
+    left: 45px;
+  }
+
+  .image_2 {
+    position: absolute;
+    width: 68px;
+    height: 63px;
+    top: 150px;
+    left: 50px;
+  }
+
+  .image_3 {
+    position: absolute;
+    width: 51px;
+    height: 63px;
+    top: 140px;
+    left: 50px;
+  }
+
+  .image_4 {
+    position: absolute;
+    width: 51px;
+    height: 63px;
+    top: 150px;
+    left: 50px;
+  }
+}

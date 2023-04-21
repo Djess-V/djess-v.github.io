@@ -1,0 +1,225 @@
+.preview {
+  -webkit-text-size-adjust: 100%;
+  font-family: "Gilroy-Medium", Arial, Tahoma;
+  font-size: 16px;
+  line-height: 125%;
+  color: #333;
+  user-select: none;
+}
+.block {
+  user-select: none;
+  box-shadow: 0 1px 10px 0 rgb(0 0 0 / 30%);
+  border-radius: 8px;
+  text-align: left;
+  background-color: #ffffff;
+  padding: 40px;
+  max-width: 90%;
+  margin: 20px auto;
+}
+.resume {
+  display: flex;
+  font-size: 14px;
+  line-height: 18px;
+  text-align: left;
+}
+
+@media (max-width: 670px) {
+  .resume {
+    flex-direction: column;
+  }
+}
+.resume__span {
+  color: #5c7c94;
+}
+.resume__column {
+  flex: 1;
+}
+.resume__column--left {
+  flex-basis: 70%;
+}
+.resume__head {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+}
+.resume__head__photo {
+  width: 200px;
+  height: 200px;
+  border-radius: 10px;
+  border: 1px solid #d0d0d0;
+  margin: auto;
+  overflow: hidden;
+  background: url(../img/foto_by_resume.png) no-repeat #f0f0f0 center center;
+  background-size: 75%;
+}
+.resume__head__photo img {
+  width: 198px;
+  margin-top: 0px;
+  margin-left: 0px;
+}
+@media (min-width: 475px) {
+  .resume__head {
+    position: relative;
+    padding-left: 150px;
+    height: 120px;
+  }
+  .resume__head__photo {
+    position: absolute;
+    margin-left: -150px;
+    width: 120px;
+    height: 120px;
+  }
+  .resume__head__photo img {
+    width: 118px;
+  }
+}
+.resume__head__name {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 26px;
+  flex-shrink: 0;
+  padding-bottom: 10px;
+  text-transform: capitalize;
+}
+.resume__head__position {
+  font-weight: bold;
+  color: #5c7c94;
+  flex-basis: 100%;
+  font-size: 16px;
+  margin: 0.5em 0px;
+}
+@media (max-width: 474px) {
+  .resume__head__name {
+    padding-top: 15px;
+  }
+  .resume__head__position {
+    padding-bottom: 10px;
+  }
+}
+.resume__head__geo {
+  flex-shrink: 0;
+  margin-bottom: 4px;
+  color: #666;
+  padding-left: 24px;
+  background: url(../img/location.svg) transparent no-repeat 0 0;
+  background-size: 20px 20px;
+  font-size: 14px;
+  line-height: 14px;
+  min-height: 20px;
+  display: flex;
+  align-items: center;
+}
+.resume__title {
+  font-weight: bold;
+  margin-top: 30px;
+  line-height: 26px;
+  background-size: 24px 24px;
+  padding-left: 32px;
+  font-size: 16px;
+}
+
+@media (max-width: 375px) {
+  .resume__title {
+    margin-top: 50px;
+  }
+}
+.resume__title--personal {
+  background: url(../img/person.svg) transparent no-repeat 0 0;
+  background-size: 20px 20px;
+}
+.resume__group {
+  margin-left: 12px;
+  padding-left: 20px;
+  border-left: 1px solid #d0d0d0;
+  margin-top: 10px;
+}
+.resume__group p {
+  margin: 12px 0px;
+}
+.resume__group a {
+  color: rgb(24, 205, 255);
+}
+.resume__title--expirience {
+  background: url(../img/work.svg) transparent no-repeat 0 0;
+  background-size: 20px 20px;
+}
+.resume__expirience__position {
+  font-size: 16px;
+  line-height: 20px;
+}
+.resume__expirience__company {
+  margin-top: 4px;
+}
+.resume__expirience__period {
+  margin: 10px 0px;
+  color: #5c7c94;
+}
+.resume__expirience__details {
+  margin-top: 3px;
+  color: #5c7c94;
+}
+.resume__title--education {
+  background: url(../img/education.svg) transparent no-repeat 0 0;
+  background-size: 25px 25px;
+}
+.resume__education__school {
+  font-size: 16px;
+  line-height: 20px;
+}
+.resume__education__class {
+  margin-top: 4px;
+}
+.resume__education__year {
+  margin-top: 3px;
+  color: #5c7c94;
+}
+.resume__title--info {
+  background: url(../img/info.svg) transparent no-repeat 0 0;
+  background-size: 20px 20px;
+}
+.resume__column--right {
+  flex-basis: 30%;
+}
+.resume__details {
+  margin-bottom: 20px;
+}
+.resume__salary {
+  margin-bottom: 20px;
+}
+.resume__salary__title {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+.resume__salary__amount {
+  color: #5c7c94;
+}
+.resume__salary__tick {
+  padding-left: 30px;
+  background: url(../img/check-mark.svg) transparent no-repeat 0 0;
+  background-size: 20px 20px;
+  margin-bottom: 10px;
+}
+.resume__details__title {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+@media (max-width: 375px) {
+  .resume__details__title,
+  .resume__salary__title {
+    margin-top: 50px;
+  }
+}
+.resume__details__email {
+  color: #5c7c94;
+}
+.resume__skils {
+}
+.resume__skils p {
+  padding-left: 30px;
+  background: url(../img/check-mark.svg) transparent no-repeat 0 0;
+  background-size: 20px 20px;
+  margin-bottom: 10px;
+}
+.resume__project {
+  margin-bottom: 20px;
+}

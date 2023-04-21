@@ -1,0 +1,487 @@
+.computer__display {
+  position: relative;
+  box-shadow: 0 0 7px 2px $colorGrey2;
+  background-color: $colorBlack;
+  border: 2px solid $colorGreen;
+  border-radius: 30px;
+  margin: 10px 0px 0px;
+  padding: 10px 10px 10px;
+  width: 700px;
+  height: 300px;
+}
+
+#display_lock {
+  background-color: $colorWhite;
+}
+
+.display_background {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: 680px 276px;
+  border: 2px solid $colorGreen;
+  border-radius: 20px;
+  color: $colorBlack;
+  border-color: $colorGrey;
+  font-size: 16pt;
+  width: 676px;
+  height: 276px;
+
+  & > audio {
+    position: absolute;
+    top: 200px;
+  }
+
+  & > input {
+    border: 2px solid $colorGrey2;
+    border-radius: 7px;
+    color: $colorBlack;
+    margin-right: 5px;
+    font-size: 14pt;
+    width: 250px;
+    height: 30px;
+
+    &:hover {
+      box-shadow: 0 0 2px 2px $colorGrey2;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+.audio_list_modal {
+  position: absolute;
+  padding: 5px;
+  border: 2px solid $colorGrey2;
+  box-shadow: 0 0 10px 3px black;
+  border-radius: 7px;
+  background-color: rgb(93, 182, 130);
+  top: 20px;
+
+  .songActive {
+    background-color: rgb(199, 195, 190);
+    border-radius: 3px;
+  }
+
+  & > h1 {
+    text-align: center;
+    font-size: 12pt;
+    color: black;
+    margin-top: 5px;
+  }
+
+  & > ul {
+    margin-top: 10px;
+
+    & > li {
+      list-style-type: none;
+      margin: 5px;
+
+      & > a {
+        font-size: 10pt;
+        color: black;
+        text-decoration: none;
+      }
+    }
+
+    & > li:hover {
+      background-color: rgb(199, 195, 190);
+      border-radius: 3px;
+    }
+  }
+}
+
+#searchButton {
+  border: 2px solid $colorGrey2;
+  background-color: rgb(203, 228, 215);
+  border-radius: 3px;
+  color: $colorBlack;
+  font-size: 10pt;
+  width: 80px;
+  height: 30px;
+
+  &:hover {
+    box-shadow: 0 0 2px 2px $colorGrey2;
+  }
+}
+
+#clearButton {
+  border: 2px solid $colorGrey2;
+  background-color: rgb(203, 228, 215);
+  border-radius: 3px;
+  color: $colorBlack;
+  font-size: 10pt;
+  width: 80px;
+  height: 30px;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+
+  &:hover {
+    box-shadow: 0 0 2px 2px $colorGrey2;
+  }
+}
+
+.displayImage_0 {
+  background-image: url(../assets/img/display_background/derevia_gory_les.jpg);
+}
+
+.displayImage_1 {
+  background-image: url(../assets/img/display_background/dom_derevia_sneg.jpg);
+}
+
+.displayImage_2 {
+  background-image: url(../assets/img/display_background/izgorod_pole_derevia.jpg);
+}
+
+.displayImage_3 {
+  background-image: url(../assets/img/display_background/more_kamni_tuman.jpg);
+}
+
+.display_lock {
+  background-image: url(../assets/img/other/lock.png);
+}
+
+.display_mouse {
+  background-image: url(../assets/img/other/crazy-mouse.gif);
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  bottom: 2px;
+  left: 0px;
+}
+
+@keyframes rotateUp {
+  from {
+    transform: ratate(0);
+  }
+
+  to {
+    transform: rotate(-90deg);
+  }
+}
+
+@keyframes rotateLeft {
+  from {
+    transform: rotate(-90deg);
+  }
+
+  to {
+    transform: rotate(-180deg);
+  }
+}
+
+@keyframes rotateDown {
+  from {
+    transform: ratate(-180deg);
+  }
+
+  to {
+    transform: rotate(-270deg);
+  }
+}
+
+@keyframes rotateRight {
+  from {
+    transform: ratate(-270deg);
+  }
+
+  to {
+    transform: rotate(-360deg);
+  }
+}
+.moveRightMouse {
+  left: 555px;
+  transition: left 8s cubic-bezier(0, 0, 1, 1);
+}
+.rotateMouseUp {
+  left: 555px;
+  animation: rotateUp 4s infinite alternate;
+}
+
+.moveUpMouse {
+  transform: rotate(-90deg);
+  left: 555px;
+  bottom: 150px;
+  transition: bottom 4s cubic-bezier(0, 0, 1, 1);
+}
+
+.rotateMouseLeft {
+  transform: rotate(-90deg);
+  left: 555px;
+  bottom: 150px;
+  animation: rotateLeft 4s infinite alternate;
+}
+
+.moveLeftMouse {
+  transform: rotate(-180deg);
+  left: 0px;
+  bottom: 150px;
+  transition: left 8s cubic-bezier(0, 0, 1, 1);
+}
+
+.rotateMouseDown {
+  transform: rotate(-180deg);
+  left: 0px;
+  bottom: 150px;
+  animation: rotateDown 4s infinite alternate;
+}
+
+.moveDownMouse {
+  transform: rotate(-270deg);
+  left: 0px;
+  bottom: 0px;
+  transition: bottom 4s cubic-bezier(0, 0, 1, 1);
+}
+
+.rotateMouseRight {
+  transform: rotate(-270deg);
+  left: 0px;
+  bottom: 00px;
+  animation: rotateRight 4s infinite alternate;
+}
+
+.display__map {
+  position: absolute;
+  border-radius: 20px;
+  top: 18px;
+  left: 163px;
+  width: 350px;
+  height: 240px;
+  overflow: hidden;
+}
+
+ymaps {
+  color: $colorBlack;
+}
+.display_calculator {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  border: 2px solid $colorGrey2;
+  top: 10px;
+  left: 10px;
+  background-color: rgb(223, 224, 224);
+  border-radius: 3px;
+  color: $colorBlack;
+
+  width: 120px;
+  height: 170px;
+
+  &:hover {
+    box-shadow: 0 0 2px 2px $colorGrey2;
+  }
+
+  #field {
+    background-color: rgb(201, 247, 247);
+    border: none;
+    border-radius: 3px;
+    color: black;
+    font-size: 11pt;
+    line-height: 1.4;
+    text-align: right;
+    width: 110px;
+    height: 20px;
+    margin: 5px 0;
+
+    &:hover {
+      outline: none;
+    }
+  }
+
+  * {
+    font-size: 8pt;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+}
+
+#calculator_tablo {
+  display: flex;
+  justify-content: space-between;
+  font-size: 6pt;
+  color: black;
+  text-align: right;
+  width: 110px;
+  height: 10px;
+}
+
+#calculator_tablo_charMemory {
+  font-size: 6pt;
+  color: $colorGreen;
+  text-align: right;
+  width: 10px;
+  height: 10px;
+}
+
+#calculator_tablo_tablo {
+  font-size: 6pt;
+  color: black;
+  text-align: right;
+  width: 100px;
+  height: 10px;
+}
+
+.calculator_buttons {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(4, 26px);
+  grid-template-rows: repeat(6, 17px);
+  gap: 2px;
+  width: 110px;
+  height: 112px;
+
+  button[class~="disabled_button"] {
+    background-color: rgb(231, 228, 228);
+    border: 1px solid rgb(206, 203, 203);
+  }
+
+  button[class~="onMemory"] {
+    background-color: $colorGreen;
+  }
+
+  button[class~="windowMemoryOpen"] {
+    background-color: $colorGreen;
+    border: 2px inset;
+  }
+}
+
+.calculator_button {
+  background-color: white;
+  color: black;
+  border: none;
+
+  &:hover {
+    background-color: rgb(231, 228, 228);
+    border: 1px solid rgb(206, 203, 203);
+  }
+}
+
+#calculator_windowMemory {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 11pt;
+  color: black;
+  position: absolute;
+  top: 19px;
+  left: 0;
+  background-color: white;
+  width: 110px;
+  height: 17px;
+  z-index: 5;
+}
+
+.display_clock {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  border: 2px solid $colorGrey2;
+  top: 10px;
+  right: 10px;
+  background-color: rgb(223, 224, 224);
+  border-radius: 3px;
+  color: $colorBlack;
+  font-size: 16pt;
+  width: 120px;
+  height: 35px;
+
+  &:hover {
+    box-shadow: 0 0 2px 2px $colorGrey2;
+  }
+}
+
+.display_calendar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  border: 2px solid $colorGrey2;
+  border-radius: 3px;
+  top: 50px;
+  right: 10px;
+  background-color: rgb(223, 224, 224);
+  color: $colorBlack;
+  font-size: 16pt;
+  width: 120px;
+  height: 130px;
+
+  &:hover {
+    box-shadow: 0 0 2px 2px $colorGrey2;
+  }
+}
+
+#calendar_header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding: 2px 3px;
+  border-width: 1px;
+  border-color: $colorGrey2;
+  border-style: none none solid none;
+  width: 120px;
+
+  & > div {
+    font-size: 9pt;
+    color: black;
+    text-align: center;
+  }
+
+  & > div:first-child {
+    width: 80px;
+  }
+}
+
+#sortUp,
+#sortDown {
+  cursor: pointer;
+}
+
+#today {
+  background-color: rgb(107, 203, 228);
+  color: white;
+  border-radius: 3px;
+}
+
+.calendar_table {
+  border: none;
+  background-color: rgb(223, 224, 224);
+  cursor: pointer;
+  margin: auto;
+
+  thead {
+    tr {
+      th {
+        border: none;
+        padding: 1px;
+        font-size: 6pt;
+        color: black;
+        text-align: center;
+      }
+    }
+  }
+  tbody {
+    td {
+      border: none;
+      padding: 1px;
+      font-size: 6pt;
+      font-weight: 800;
+      color: black;
+      text-align: center;
+    }
+    td[class="anotherMonth"] {
+      font-weight: 100;
+    }
+  }
+}

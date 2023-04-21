@@ -1,0 +1,135 @@
+.wrapper_game_computer {
+  display: flex;
+  grid-column: 1;
+}
+
+.game {
+  display: flex;
+  flex-direction: column;
+  width: 420px;
+}
+
+.game__header {
+  font-size: 15pt;
+  margin: 15px auto 10px;
+}
+
+.game__subhead {
+  font-size: 10pt;
+  margin: 0px auto 10px;
+}
+
+.game-board {
+  margin: 20px auto;
+}
+
+.board-row:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.board-row__square {
+  background: #fff;
+  border: 1px solid rgb(0, 0, 0);
+  float: left;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 34px;
+  height: 34px;
+  margin-right: -1px;
+  margin-top: -1px;
+  padding: 0;
+  text-align: center;
+  width: 34px;
+  color: rgb(0, 0, 0);
+}
+
+.board-row__square_status_winner {
+  background-color: #ffff00;
+}
+
+.board-row__square_status_ordinary {
+  background-color: rgb(10, 162, 233);
+}
+
+.game-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 10px auto;
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.game_info__status {
+  width: 180px;
+  margin-left: 5px;
+  text-align: center;
+  font-size: 15pt;
+}
+
+.game-table {
+  background-color: black;
+  margin: 5px auto;
+  border: 2px solid rgb(30, 192, 130);
+}
+
+.game-table-th {
+  width: 150px;
+  border: 1px solid rgb(30, 192, 130);
+  text-align: center;
+  font-weight: 800;
+  padding: 3px;
+}
+
+.game-table-th_style_short {
+  width: 70px;
+}
+
+.game-table-th__span {
+  margin-right: 10px;
+}
+
+.game-table-th-sort {
+  margin-left: 5px;
+  width: 17px;
+  height: 17px;
+  cursor: pointer;
+}
+
+.game-table-td {
+  border: 1px solid rgb(30, 192, 130);
+  text-align: center;
+  font-weight: 800;
+  padding: 3px;
+}
+
+.game-table-td__link {
+  text-decoration: none;
+  background-color: black;
+  cursor: pointer;
+}
+
+.game-table-td__link:hover {
+  color: rgb(30, 192, 130);
+}
+
+.game-table-td__button {
+  border: 1px solid rgb(146, 140, 140);
+  background-color: rgb(30, 192, 130);
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 5px 15px;
+}
+
+.game-table-td__button_mode_start {
+  width: 130px;
+  margin-right: 10px;
+  text-align: center;
+}
+
+.game-table-td__button_hidden {
+  opacity: 0;
+}/*# sourceMappingURL=game.css.map */
